@@ -5,7 +5,7 @@ async function initialize () {
     const products = await getProducts();
     for (const product of products) {
         const productElement = document.createElement("div");
-        productElement.className = "product"
+        productElement.className = "product";
 
         const imgProducts = document.createElement("img");
         imgProducts.src = product.thumbnail;
@@ -37,7 +37,7 @@ async function initialize () {
 async function getProducts() {
     const resp = await fetch(URL);
     const obj = await resp.json();
-    return obj.products
+    return obj.products;
 }
 
 initialize();
